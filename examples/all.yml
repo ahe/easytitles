@@ -1,0 +1,8 @@
+default: "This is the global default title"
+
+articles:
+  default: "Default title for the ArticlesController"
+  index: "Listing articles"
+  show: "Article details"
+  new: "New article"
+  edit: "Edit article"

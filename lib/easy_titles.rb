@@ -25,9 +25,9 @@ module EasyTitles
     
     if titles.nil?
       'EasyTitles plugin : titles YAML file is missing'
-    elsif !titles[controller_name][action_name].nil?
+    elsif !titles[controller_name].nil? && !titles[controller_name][action_name].nil?
       titles[controller_name][action_name]
-    elsif !titles[controller_name]['default'].nil?
+    elsif !titles[controller_name].nil? && !titles[controller_name]['default'].nil?
       titles[controller_name]['default']
     elsif !titles['default'].nil?
       titles['default']

@@ -1,13 +1,42 @@
 EasyTitles
 ==========
 
-Introduction goes here.
+This Rails plugin allows you to manage easily the titles of your pages.
+All your titles are centralized in YAML files and structured respecting controllers/actions hierarchy.
+The title of your page will be evaluated according to the current controller_name & controller_action.
+EasyTitles supports I18n if you are using a version of Rails >= 2.2
+
+Installation
+============
+
+1) /script/plugin install git://github.com/ahe/easytitles.git
+
+2) Create a 'titles' folder in your config folder (RAILS_ROOT/config/titles).
+
+3) If you are not using I18n (internationalization) create a all.yml file in your titles folder (this is the default file where all your titles must be added).
+
+4) If you are using I18n, create a yml file for each locale (en.yml, fr.yml, ...) in your titles folder.
+
+5) Your yml files must respect the following format : (Let's say that you have a REST article controller)
+
+default: "This default title will be used if you don't specify the title of a specific controller"
+
+articles:
+  default: "This is the default title for the articles controller"
+  index: "Listing articles"
+  show: "Article details"
+
+So with this configuration, if you access :
+
+- /articles : title will be "Listing articles"
+- /articles/new : title will be "This is the default title for the articles controller"
+- /another_controller : title will be "This default title will be used if you don't specify the title of a specific controller"
+
+6) Finally, you have to add <%= easy_title %> in your title tag.
+So for example in your layout : 
+<title>My website - <%= easy_title %></title>
 
 
-Example
-=======
-
-Example goes here.
 
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Copyright (c) 2009 [Anthony Heukmes], released under the MIT license
