@@ -1,13 +1,11 @@
-EasyTitles
-==========
+= EasyTitles
 
 This Rails plugin allows you to manage easily the titles of your pages.
 All your titles are centralized in YAML files and structured respecting controllers/actions hierarchy.
 The title of your page will be evaluated according to the current controller_name & controller_action.
 EasyTitles supports I18n if you are using a version of Rails >= 2.2
 
-Installation
-============
+== Installation
 
 1) /script/plugin install git://github.com/ahe/easytitles.git
 
@@ -37,6 +35,5 @@ So for example in your layout :
 <title>My website - <%= easy_title %></title>
 
 
-
-
+=
 Copyright (c) 2009 [Anthony Heukmes], released under the MIT license
