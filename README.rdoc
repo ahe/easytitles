@@ -33,15 +33,21 @@ EasyTitles also allows you to set default titles.
 
 == Installation
 
-<ol>
-<li>script/plugin install git://github.com/ahe/easytitles.git</li>
-<li>Create a titles folder in your config folder (RAILS_ROOT/config/titles).</li>
-<li>If you are not using I18n (internationalization) create a all.yml file in your titles folder (this is the default file where all your titles must be added).</li>
-<li>Otherwise, create a yml file for each locale (en.yml, fr.yml, …) in your titles folder.</li>
-<li>Put all your titles in the yml file while respecting the above format.</li>
-<li>Add the easy_title call in your title tag : <title><%= easy_title %></title></li>
-</ol>
+-script/plugin install git://github.com/ahe/easytitles.git
+
+-Create a titles folder in your config folder (RAILS_ROOT/config/titles).
+
+-If you are not using I18n (internationalization) create a all.yml file in your titles folder (this is the default file where all your titles must be added).
+
+-Otherwise, create a yml file for each locale (en.yml, fr.yml, …) in your titles folder.
+
+-Put all your titles in the yml file while respecting the above format.
+
+-Add the easy_title call in your title tag : <title><%= easy_title %></title>
 
 
+== Author
+
+Anthony Heukmes
 
 
