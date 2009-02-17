@@ -17,12 +17,13 @@ EasyTitles supports I18n if you are using a version of Rails >= 2.2
 
 5) Your yml files must respect the following format : (Let's say that you have a REST article controller)
 
-default: "This default title will be used if you don't specify the title of a specific controller"
 
-articles:
-  default: "This is the default title for the articles controller"
-  index: "Listing articles"
-  show: "Article details"
+  default: "This default title will be used if you don't specify the title of a specific controller"
+  articles:
+    default: "This is the default title for the articles controller"
+    index: "Listing articles"
+    show: "Article details"
+
 
 So with this configuration, if you access :
 
@@ -32,7 +33,8 @@ So with this configuration, if you access :
 
 6) Finally, you have to add <%= easy_title %> in your title tag.
 So for example in your layout : 
-<title>My website - <%= easy_title %></title>
+
+  <title>My website - <%= easy_title %></title>
 
 
 =
