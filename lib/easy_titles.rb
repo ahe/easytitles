@@ -6,13 +6,11 @@ module EasyTitles
   def self.load_titles!
     @@files = {}
     base_path = "#{RAILS_ROOT}/config/titles/"
-    base_dir  = Dir.new(base_path) rescue nil
+    base_dir  = Dir.new(base_path) rescue return
     
-    if !base_dir.nil?
-      base_dir.each do |file|
-        if file.ends_with?(".yml")
-          @@files[file.split(".yml").first.to_sym] = YAML.load_file(base_path + file)
-        end
+    base_dir.each do |file|
+      if file.ends_with?(".yml")
+        @@files[file.split(".yml").first.to_sym] = YAML.load_file(base_path + file)
       end
     end
   end
@@ -21,7 +19,7 @@ module EasyTitles
   def self.get_current_title(controller_name, action_name)
     
     titles = @@files[I18n.locale.to_sym] rescue nil
-    titles = @@files[:all] if titles.nil?
+    titles = @@files.values.first if titles.nil?
     
     if titles.nil?
       'EasyTitles plugin : titles YAML file is missing'
