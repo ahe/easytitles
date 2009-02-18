@@ -6,7 +6,7 @@ This plugin also supports internationalization (I18n) if you use a version of Ra
 
 The big advantage is that all titles are centralized in one place, making them easy to manage.
 
-Let's say that you have a REST "Articles" controller (with basic CRUD methods), the only one thing you have to do is creating a YAML file respecting the following format :
+Let's say that you have a REST "Articles" controller (with basic CRUD methods), the only one thing you have to do is to create a YAML file respecting the following format :
 
   articles:
     index: 'Listing articles'
@@ -18,10 +18,10 @@ You can then add a call to the easy_title helper method in the title tag of your
 
   <title><%= easy_title %></title>
 
-This method will determine the title to display respecting the current controller name & action name.
+This method will determine the title to display in function of the current controller name & action name.
 So if you are on the /articles/show page, the title "Article details" will be displayed.
 
-EasyTitles also allows you to set default titles.
+EasyTitles also allows you to set default titles :
 
   default: "This title will be displayed for any controller/action without a defined title"
   articles:
@@ -37,11 +37,11 @@ EasyTitles also allows you to set default titles.
 
 -Create a titles folder in your config folder (RAILS_ROOT/config/titles).
 
--If you are not using I18n (internationalization) create a all.yml file in your titles folder (this is the default file where all your titles must be added).
+-If you are not using I18n (internationalization) create a all.yml file in your titles folder.
 
 -Otherwise, create a yml file for each locale (en.yml, fr.yml, …) in your titles folder.
 
--Put all your titles in the yml file while respecting the above format.
+-Put all your titles in the yml file(s) while respecting the above format.
 
 -Add the easy_title call in your title tag : <title><%= easy_title %></title>
 
