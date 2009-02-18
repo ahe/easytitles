@@ -9,10 +9,10 @@ The big advantage is that all titles are centralized in one place, making them e
 Let's say that you have a REST "Articles" controller (with basic CRUD methods), the only one thing you have to do is to create a YAML file respecting the following format :
 
   articles:
-    index: 'Listing articles'
-    show: 'Article details'
-    new: 'New article'
-    edit: 'Edit article'
+    index: "Listing articles"
+    show: "Article details"
+    new: "New article"
+    edit: "Edit article"
 
 You can then add a call to the easy_title helper method in the title tag of your layout :
 
@@ -26,10 +26,10 @@ EasyTitles also allows you to set default titles :
   default: "This title will be displayed for any controller/action without a defined title"
   articles:
     default: "This title will be displayed for articles methods without a defined title"
-    index: 'Listing articles'
-    show: 'Article details'
-    new: 'New article'
-    edit: 'Edit article'
+    index: "Listing articles"
+    show: "Article details"
+    new: "New article"
+    edit: "Edit article"
 
 == Installation
 
