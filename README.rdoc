@@ -31,17 +31,20 @@ EasyTitles also allows you to set default titles :
     new: "New article"
     edit: "Edit article"
 
+
+If you need a dynamic title for some actions, you can create a @page_title instance variable in your controller.
+The easy_title helper method will automatically return @page_title if it is defined.
+
+
 == Installation
 
 -script/plugin install git://github.com/ahe/easytitles.git
 
--Create a titles folder in your config folder (RAILS_ROOT/config/titles).
+-The installation created a titles folder in your config folder (RAILS_ROOT/config/titles).
 
--If you are not using I18n (internationalization) create a all.yml file in your titles folder.
+-If you are not using I18n (internationalization) use config/titles/all.yml to store your titles.
 
 -Otherwise, create a yml file for each locale (en.yml, fr.yml, …) in your titles folder.
-
--Put all your titles in the yml file(s) while respecting the above format.
 
 -Add the easy_title call in your title tag : <title><%= easy_title %></title>
 
@@ -49,5 +52,8 @@ EasyTitles also allows you to set default titles :
 == Author
 
 Anthony Heukmes
+
+http://www.2dconcept.com
+http://www.twitter.com/2dc
 
 
