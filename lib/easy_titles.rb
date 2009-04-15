@@ -42,6 +42,7 @@ module ActionView
     
     # Use this helper method in the title tag of your layout
     def easy_title
+      return @page_title if @page_title
       EasyTitles.load_titles! if RAILS_ENV == 'development'
       EasyTitles.get_current_title(controller.controller_name, controller.action_name)
     end
